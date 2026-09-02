@@ -59,6 +59,17 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-cream: var(--cream);
+  --color-paper: var(--paper);
+  --color-line: var(--line);
+  --font-display: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
 }
 
 :root {
@@ -95,6 +106,15 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+  --ink: oklch(0.16 0.025 255);
+  --ink-soft: oklch(0.21 0.022 255);
+  --surface: oklch(0.25 0.02 255);
+  --surface-2: oklch(0.29 0.019 255);
+  --gold: oklch(0.76 0.12 83);
+  --gold-soft: oklch(0.85 0.09 83);
+  --cream: oklch(0.93 0.025 85);
+  --paper: oklch(0.98 0.008 85);
+  --line: oklch(0.93 0.02 85 / 12%);
 }
 
 .dark {
@@ -140,5 +160,25 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
   }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@utility animate-rise {
+  animation: rise 0.5s cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+
+@utility no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+.app-shell {
+  background: var(--paper);
 }
