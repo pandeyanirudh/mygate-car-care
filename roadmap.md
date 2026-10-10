@@ -4,3 +4,4 @@
 - [x] Add service categories and exact subscription pricing
 - [x] Add functional mock booking flow with vehicle, schedule, review, and payment
 - [x] Add bookings, tracking timeline, notifications, profile, and vehicle management
+- [ ] Add real login, signup, recovery, saved profiles, and logout

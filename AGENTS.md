@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep the existing prototype home public; real account actions use Cloud authentication and owner-scoped profiles so demo browsing stays available.
+- Keep one account session subscriber in AccountProvider and validate private profile reads and writes through authenticated server functions to prevent cross-account access.
